@@ -20,7 +20,7 @@
         #eye-container {
             width: 100%;
             height: 100%;
-            cursor: pointer;
+            position: relative;
         }
 
         #eye-container img {
@@ -29,12 +29,24 @@
             object-fit: cover;
             display: block;
         }
+
+        /* Zone cliquable uniquement sur l’œil */
+        #clickable-eye {
+            position: absolute;
+            top: 40%; /* Ajuste la position verticale */
+            left: 45%; /* Ajuste la position horizontale */
+            width: 10%; /* Ajuste la largeur */
+            height: 10%; /* Ajuste la hauteur */
+            cursor: pointer;
+            background: rgba(255, 0, 0, 0.2); /* TEMPORAIRE : pour voir la zone (enlever après test) */
+        }
     </style>
 </head>
 <body>
 
-    <div id="eye-container" onclick="window.location.href='https://youtu.be/6zo_DPpgtl8?si=bykV8QFEn1-CK1uR';">
+    <div id="eye-container">
         <img src="https://raw.githubusercontent.com/decemberme5/Promotion-clip/refs/heads/main/IMG_6962.jpeg" alt="Œil">
+        <div id="clickable-eye" onclick="window.location.href='https://youtu.be/6zo_DPpgtl8?si=bykV8QFEn1-CK1uR';"></div>
     </div>
 
 </body>
